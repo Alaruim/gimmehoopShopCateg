@@ -1,0 +1,166 @@
+.img-background{
+    position: relative;
+    height: 186px;
+    background-image: url(images/shop-cat-back.png);
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h2{
+        margin-top: 47px;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 1.1;
+        color: #fff;
+    }
+    .categ{
+        margin-top: 34px;
+        gap: 80px;
+        display: flex;
+        a{
+            text-decoration: none;
+            text-align: center;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 1.1;
+            color: #fff;
+        }
+    }
+    img{
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        top: 52px;
+        left: 52px;
+        fill: #fff;
+    }
+}
+
+.direct{
+    margin-top: 38px;
+    margin-left: 51px;
+    span{
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.1;
+    }
+    span strong{
+        font-weight: 700;
+    }
+}
+
+.prod-list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 колонки равной ширины */
+    justify-items: center;
+    .prod{
+        margin-top: 50px;
+        width: 347px;
+        padding: 29px 26px 0;
+        box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.2);
+        display: flex;
+        flex-direction: column;
+        span{
+            text-align: center;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 1.1;
+            margin-top: 18px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #D8D8D8;
+        }
+        img{
+            width: 295px;
+            height: 355px;
+            object-fit: cover;
+        }
+        .price-bar{
+            display: flex;
+            margin-top: 14px;
+            margin-bottom: 30px;
+            gap: 11px;
+            align-items: center;
+            justify-content: center;
+            .act-price{
+                font-weight: 700;
+                font-size: 22px;
+                line-height: 1.1;
+            }
+            .old-price{
+                text-decoration: line-through;
+                color: #C9C9C9;
+                font-weight: 500;
+                font-size: 15px;
+                line-height: 1.1;
+            }
+        }
+    }
+}
+
+.paginations{
+    margin-top: 82px;
+    margin-bottom: 101px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    button{
+        width: 46px;
+        height: 46px;
+        font-family: 'Inter', sans-serif; /* Используем шрифт Inter */
+        font-weight: 500;
+        font-size: 16px;
+    }
+    .active{
+        color: #fff;
+        background-color: #000;
+        font-weight: 700;
+    }
+
+}
+
+@media (max-width: 1100px){
+    .img-background{
+        justify-content: center;
+
+        h2{
+            margin-top: 0;           
+            font-size: 24px;
+            line-height: 1.1;
+            color: #fff;
+        }
+
+        img{
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            top: 12px;
+            left: 12px;
+            fill: #fff;
+        }
+    }
+    .direct{
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+    .prod-list{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .prod{
+            margin-top: 25px;
+            .price-bar{
+                .old-price{
+                    font-size: 15px;
+                }
+                .act-price{
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+    .paginations{
+        margin: 60px 0;
+    }
+}
